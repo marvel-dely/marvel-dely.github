@@ -11,7 +11,7 @@
     angular.module('app')
         .constant(_, '_')
         .constant('API', 'https://gateway.marvel.com:443')
-        .constant('APIKEY', '?apikey=279dcad4d3e04ae9efade75724bcd117')
+        .constant('APIKEY', '?apikey=1b0d5d2d87ebadfa2f5361a5f179314b')
 }());
 
 (function() {
@@ -448,6 +448,32 @@
 
     angular
         .module('app')
+        .directive('headerDirective', headerDirective);
+
+    function headerDirective() {
+        var directive = {
+            restrict: 'EA',
+            templateUrl: 'app/components/header/header.html',
+            controller: headerController,
+            controllerAs: 'headerController',
+            bindToController: true
+        };
+
+        return directive;
+    }
+
+    headerController.$inject = ['$state', '$scope', '$window'];
+
+    /* @ngInject */
+    function headerController($state, $scope, $window) {
+        var vm = this;
+    }
+})();
+(function() {
+    'use strict';
+
+    angular
+        .module('app')
         .directive('footerDirective', footerDirective);
 
     function footerDirective() {
@@ -476,32 +502,6 @@
     }
 })();
 
-(function() {
-    'use strict';
-
-    angular
-        .module('app')
-        .directive('headerDirective', headerDirective);
-
-    function headerDirective() {
-        var directive = {
-            restrict: 'EA',
-            templateUrl: 'app/components/header/header.html',
-            controller: headerController,
-            controllerAs: 'headerController',
-            bindToController: true
-        };
-
-        return directive;
-    }
-
-    headerController.$inject = ['$state', '$scope', '$window'];
-
-    /* @ngInject */
-    function headerController($state, $scope, $window) {
-        var vm = this;
-    }
-})();
 (function() {
     'use strict';
     angular.module('app')
