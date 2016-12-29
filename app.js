@@ -81,6 +81,20 @@
 
 }());
 
+(function() {
+    'use strict';
+    angular.module('app')
+        .controller('dashboardController', dashboardController);
+
+    dashboardController.$inject = ['$scope', '$state', 'apiService'];
+    /* @ngInject */
+    function dashboardController($scope, $state, apiService) {
+        var vm = this;
+
+      
+    }
+})();
+
 /**
  * Created by Delymar on 23/10/2016.
  */
@@ -256,20 +270,6 @@
             return deferred.promise;
         };
 
-    }
-})();
-
-(function() {
-    'use strict';
-    angular.module('app')
-        .controller('dashboardController', dashboardController);
-
-    dashboardController.$inject = ['$scope', '$state', 'apiService'];
-    /* @ngInject */
-    function dashboardController($scope, $state, apiService) {
-        var vm = this;
-
-      
     }
 })();
 
