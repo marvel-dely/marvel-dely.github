@@ -1,5 +1,6 @@
 header {
   position: fixed;
+  z-index: 1;
 }
 header .logotype {
   background-color: #2d2727;
@@ -50,6 +51,7 @@ footer .foot .img-logo {
 }
 .landing {
   margin: 0px;
+  padding-top: 70px;
   padding-bottom: 80px;
   background-color: #f4f4f4;
 }
@@ -81,6 +83,7 @@ footer .foot .img-logo {
   border: none;
   margin-top: 20px;
   margin-bottom: 30px;
+  height: 212px;
 }
 .feed .character-feed .thumbnail .img-character {
   width: 80%;
@@ -118,7 +121,7 @@ footer .foot .img-logo {
 .feed .character-feed .caption .comics-random .item {
   float: left;
   margin: 5px;
-  font-size: 16px;
+  font-size: 12px;
   color: #796f70;
   cursor: pointer;
 }

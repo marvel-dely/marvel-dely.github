@@ -1,11 +1,11 @@
 <div class="character">
   <div class="row">
     <div class="col-xs-5 imagen-col">
-        <img src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg" alt="" class="img-post" >
+        <img ng-src="{{vm.characterDetails.thumbnail.path + '.' + vm.characterDetails.thumbnail.extension}}" alt="" class="img-post" >
     </div>
     <div class="col-xs-7 info-comics">
-      <h3>{{CharacterDetails.name}}</h3>
-      <p>{{CharacterDetails.description}}</p>
+      <h3>{{vm.characterDetails.name}}</h3>
+      <p>{{vm.characterDetails.description}}</p>
     </div>
   </div>
   <div class="row">
@@ -19,8 +19,8 @@
                   <button type="button" class="btn-group btn-md add-fav pull-right">Agregar 3 a favoritos</button>
                 </div>
               <div class="row">
-                <div class="col-xs-4 items" ng-repeat="comic in CharacterDetails.comics.items" >
-                  <a class="item" ng-click="actions.OpenComicsDetailsModal(CharacterDetails.id)">{{comic.name}}</a>
+                <div class="col-xs-4 items" ng-repeat="comic in vm.characterDetails.comics.items" >
+                  <a class="item" ng-click="actions.OpenComicsDetailsModal(vm.characterId)">{{comic.name}}</a>
                 </div>
               </div>
             </uib-tab>
@@ -29,8 +29,8 @@
                    Series
                 </uib-tab-heading>
                 <div class="row">
-                  <div class="col-xs-4 items" ng-repeat="comic in CharacterDetails.series.items" >
-                    <a class="item-series" >{{comic.name}}</a>
+                  <div class="col-xs-4 items" ng-repeat="series in vm.characterDetails.series.items" >
+                    <a class="item-series" >{{series.name}}</a>
                   </div>
                 </div>
             </uib-tab>
@@ -39,8 +39,8 @@
                        stories
                    </uib-tab-heading>
                    <div class="row">
-                     <div class="col-xs-4 items-series" ng-repeat="comic in CharacterDetails.stories.items" >
-                       <a class="item">{{comic.name}}</a>
+                     <div class="col-xs-4 items-series" ng-repeat="stories in vm.characterDetails.stories.items" >
+                       <a class="item">{{stories.name}}</a>
                      </div>
                    </div>
             </uib-tab>
