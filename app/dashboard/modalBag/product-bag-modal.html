@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <i class="fa fa-times pull-right fa-2x" aria-hidden="true" ng-click="actions.CloseProductModal()"></i>
+
+    <h3 class="modal-title" id="modal-title">Agregar a Mi Bolsa de Compra</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-xs-offset-3">
+                        <img class=" img-responsive imge-thumbnail" src="{{product.img}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 class="text-center text-capitalize title">
+                        {{product.name}} - {{product.price |currency}}
+                    </h3>
+                </div>
+                <div class="row cant">
+                        <div class="form-group" >
+                            <div class="col-xs-8 col-xs-offset-2">
+                                <select class="select-cant">
+                                    <option ng-repeat="amount in amounts">{{amount.name}}</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary add-button" type="button" ng-click="actions.AddProductModal(product.id)">Agregar</button>
+    <br><br>
+</div>

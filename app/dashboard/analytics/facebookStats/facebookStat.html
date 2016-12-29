@@ -1,0 +1,19 @@
+<div class="row toolbar">
+    <p>Reports> Facebook Stats</p>
+</div>
+<div class="col-sm-9 col-xs-12 report">
+    <div class="row title-reports-facebook">
+        <p><span class="text-uppercase"> facebook stats</span> | across all Facebook accounts </p>
+    </div>
+    <p class="text-capitalize">follower demographics</p>
+    <div class="row">
+        <p class="text-capitalize pull-right"><strong>{{vm.followers.newFans}}</strong> new fans <strong>{{vm.follower.unlikedPage}}</strong> unliked you page</p>
+        <highchart id="chart1" config="vm.followers"></highchart>
+    </div>
+
+    <p class="text-capitalize">page impressions</p>
+    <div class="row">
+        <p class="text-capitalize pull-right">Impressions <strong>{{vm.pageImpressions.totalImpressions}}</strong>  by <strong>{{vm.pageImpressions.byUsers}}</strong> users</p>
+        <highchart id="chart2" config="vm.pageImpressions"></highchart>
+    </div>
+</div>

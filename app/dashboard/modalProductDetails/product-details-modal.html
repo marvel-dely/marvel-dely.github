@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <i class="fa fa-times pull-right fa-2x" aria-hidden="true" ng-click="actions.CloseProductModal()"></i>
+
+    <h3 class="modal-title" id="modal-title">Detalles de un Producto</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <div class="row">
+        <img class="imge-thumbnail" src="{{product.img}}">
+    </div>
+    <div class="row">
+        <h3 class="text-center text-capitalize title">
+            {{product.name}}
+            <i class="fa fa-thumbs-up fa-1x" ng-show="product.best_seller===true" aria-hidden="true"></i>
+            <i class="fa fa-thumbs-down fa-1x" ng-show="product.best_seller===false" aria-hidden="true"></i>
+            <span ng-show="product.available===true"> (Disponible)</span>
+            <span ng-show="product.available===false"> (No Disponible)</span>
+        </h3>
+        <h2 class="text-center price">{{product.price |currency}}</h2>
+        <p class="text-center">{{product.description}}</p>
+    </div>
+
+    <div class="clearfix"></div>
+</div>
+</div>
+<div class="modal-footer">
+    <button class="btn add-button" type="button" ng-click="actions.AddProductModal(product.id)">Agregar a la Bolsa</button>
+</div>

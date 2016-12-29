@@ -1,0 +1,58 @@
+<div class="navbar-default sidebar"  role="navigation">
+    <div class="sidebar-nav navbar-collapse" ng-class="{ collapse : deviceType == 'mobile' }">
+        <ul class="nav in" id="side-menu">
+            <li ui-sref-active="active">
+                <a ui-sref="platform.brands">
+                    <div class="col-xs-3"><img src="/assets/images/brands-icons.svg" alt="" class="icon-sidebar" /></div> Marcas
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="platform.publications">
+                    <div class="col-xs-3"><img src="/assets/images/publications-icons.svg" alt="" class="icon-sidebar"></i></div> Publicaciones
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="platform.emails">
+                    <div class="col-xs-3"><img src="/assets/images/email-icons.svg" alt="" class="icon-sidebar"></div> Email Mktg
+                </a>
+            </li>
+            <li ui-sref-active="active" ng-class="{active: collapseVar==1}">
+                <a ng-click="check(1)">
+                    <div class="col-xs-3"><img src="/assets/images/white-icons.svg" alt="" class="icon-sidebar"></div> Settings
+                </a>
+                <ul class="nav nav-second-level" collapse="collapseVar!=1">
+                    <li ui-sref-active="active">
+                        <a ui-sref="platform.settings.general">General Settings</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="platform.settings.changePassword">Cambiar Contraseña</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="platform.labels">Payment Methods</a>
+                    </li>
+                </ul>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="platform.admins">
+                    <div class="col-xs-3"><img src="/assets/images/admin-icons.svg" alt="" class="icon-sidebar"></div>Admins
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="platform.reports">
+                    <div class="col-xs-3"><img src="/assets/images/calendar-icons.svg" alt="" class="icon-sidebar"></div> Calendars
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="platform.supports">
+                    <div class="col-xs-3"><img src="/assets/images/report-icons.svg" alt="" class="icon-sidebar"></div>Reportes
+                </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="platform.calendars">
+                    <div class="col-xs-3"><img src="/assets/images/support-icons.svg" alt="" class="icon-sidebar"></div>Soportes
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
